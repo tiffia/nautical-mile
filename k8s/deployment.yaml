@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learning-tracker
+  labels:
+    app: learning-tracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learning-tracker
+  template:
+    metadata:
+      labels:
+        app: learning-tracker
+    spec:
+      containers:
+        - name: tracker
+          image: tiffiajose/learning-tracker:v1
+          ports:
+          - containerPort: 5000
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
