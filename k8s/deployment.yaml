@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: tracker
-          image: tiffiajose/learning-tracker:v1
+          image: tiffiajose/learning-tracker:sha-5e8667a
           ports:
           - containerPort: 5000
           resources:
